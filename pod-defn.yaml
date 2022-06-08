@@ -6,8 +6,8 @@ metadata:
     name: backend
 spec:
   containers:
-  - name: ngnix-container
-    image: ngnix
+  - name: nginx-container
+    image: nginx
     resources:
       limits:
         memory: "128Mi"
