@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: myapp-rs
+  labels:
+    app: myapp
+    type: front-end
+spec:
+  template:
+    metadata:
+      name: myapp-pod
+      labels:
+        app: myapp
+        type: front-end
+    spec:
+      containers:
+      - name: ngnix-container
+        image: ngnix
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "100m"
+  replicas: 3
+  selector: 
+    matchLabels:
+      type: front-end
