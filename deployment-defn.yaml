@@ -21,7 +21,7 @@ spec:
           limits:
             memory: "128Mi"
             cpu: "100m"
-  replicas: 3
+  replicas: 6
   selector: 
     matchLabels:
       type: front-end
