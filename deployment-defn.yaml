@@ -12,7 +12,6 @@ spec:
       name: myapp-pod
       labels:
         app: myapp
-        type: front-end
     spec:
       containers:
       - name: httpd-container
@@ -24,5 +23,5 @@ spec:
   replicas: 6
   selector: 
     matchLabels:
-      type: front-end
+      type: myapp
 
