@@ -15,8 +15,8 @@ spec:
         type: front-end
     spec:
       containers:
-      - name: nginx-container
-        image: nginx
+      - name: httpd-container
+        image: httpd:alpine3.16
         resources:
           limits:
             memory: "128Mi"
