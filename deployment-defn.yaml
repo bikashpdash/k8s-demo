@@ -2,26 +2,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: myapp-deploy
-  labels:
-    app: myapp
-    type: front-end
+  name: bika-myapp-deploy
 spec:
   template:
     metadata:
-      name: myapp-pod
+      name: bika-myapp-pod
       labels:
-        app: myapp
+        app: bika-myapp
     spec:
       containers:
-      - name: httpd-container
-        image: httpd:2.4.54-alpine3.16
+      - name: bika-nginx-container
+        image: nginx:stable-alpine
         resources:
           limits:
             memory: "128Mi"
             cpu: "100m"
-  replicas: 6
+  replicas: 3
   selector: 
     matchLabels:
-      type: myapp
+      type: bika-myapp
 
