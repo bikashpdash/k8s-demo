@@ -20,5 +20,5 @@ spec:
   replicas: 3
   selector: 
     matchLabels:
-      type: bika-myapp
+      app: bika-myapp
 
