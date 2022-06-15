@@ -6,9 +6,8 @@ metadata:
 spec:
   template:
     metadata:
-      name: bika-myapp-pod
       labels:
-        app: bika-myapp
+        app: nginx
     spec:
       containers:
       - name: bika-nginx-container
@@ -20,5 +19,5 @@ spec:
   replicas: 3
   selector: 
     matchLabels:
-      app: bika-myapp
+      app: nginx
 
